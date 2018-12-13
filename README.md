@@ -30,3 +30,11 @@ kafka-topics.sh --create --zookeeper zookeeper:2181 --topic calcRes --partitions
 где **zookeeper:2181** это адрес кластера Zookeeper.
 
 Имя агента можно поменять с помощью свойства **calc.executor**.
+
+## Запуск через Docker
+
+Для запуска упакованного в контейнер приложения
+
+```
+docker run --name hse-calcagent -e kafka.url=URL_kafka -d hse-calcagent:latest
+```
